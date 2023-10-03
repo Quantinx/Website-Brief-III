@@ -23,7 +23,7 @@ h1,h2,h3,h4,h5,h6 {
     display: block;
   }
 
-  /* Globals */
+  /*----------Globals---------- */
  :root {
 --text-color-main: white; 
 --padding-horizontal:2rem 
@@ -90,7 +90,7 @@ justify-content: space-around;
 .global-wrapper { 
   max-width: 62.5rem;
 }
-/*---overrides for mediums sized screens (48rem-62.5rem--- */
+/*---overrides for mediums sized screens (48rem-62.5rem) changes layout to use a grid, placing sidebar on the side--- */
 @media (min-width:48rem) {
 
  .page-title{
@@ -122,7 +122,7 @@ justify-content: flex-end;
 }
 
 }
-
+/*---overrides for larger screens (62.5rem+) centers the page once screen is above size  */
 @media (min-width:62.5rem) {
 
   .global-wrapper {
@@ -132,7 +132,7 @@ justify-content: flex-end;
 
 }
 
-  /*Components  */
+  /*----------Components----------*/
   
   .page-title-text {
     font-size: 1.6rem;
