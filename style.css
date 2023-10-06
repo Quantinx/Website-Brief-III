@@ -60,7 +60,13 @@ h1,h2,h3,h4,h5,h6 {
     padding-bottom: 1rem;
 }
 
-
+.form-container {
+  padding-left: var(--padding-horizontal);
+  padding-right: var(--padding-horizontal);
+  padding-bottom: 1rem;
+  display: flex;
+  
+}
 
 .main-text {
 margin-left: auto;
@@ -86,9 +92,15 @@ justify-content: space-around;
   width: 70%
 }
 
-
 .global-wrapper { 
   max-width: 62.5rem;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 /*---overrides for mediums sized screens (48rem-62.5rem) changes layout to use a grid, placing sidebar on the side--- */
 @media (min-width:48rem) {
@@ -170,4 +182,36 @@ border-radius: 0.5rem;
   aspect-ratio: 16/9;
   width: 100%;
   height: 100%;
+}
+
+.input, .message {
+  font-family: 'Caveat',  cursive;
+  font-size: 1.1rem;
+  background-color: transparent;
+  color: var(--text-color-main);
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.input {
+  width: 20rem;
+  
+}
+
+.message { 
+  height: 20rem;
+  width: 25rem;
+
+  resize:none 
+}
+
+.form-label {
+  display: inline ;  
+
+}
+
+.submit {
+  margin-left: auto;
+  margin-right: auto;
+  width: 10rem;
 }

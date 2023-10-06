@@ -26,35 +26,34 @@
           </ul>
         </nav>
       </header>
-      <div class="site-container">
+      <div class="form-container">
         <!--site container, only header and footer should be outside-->
-        <article class="main main-text">
-          Small description of the about followed by a video embed
-          <iframe
-            class="main-video"
-            width="300"
-            height="169"
-            src="https://www.youtube.com/embed/cFLTQVrvfLU?si=NOTwA5F0fjO5zl9r"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </article>
-        <aside class="sidebar">
-          <ul class="sidebar-content">
-            <li>Item one</li>
-            <li>Item two</li>
-            <li>Item thee</li>
-            <li>Item four</li>
-          </ul>
-          <img
-            class="sidebar-img"
-            src="../images/img04.png"
-            width="200"
-            height="280"
-          />
-        </aside>
+
+        <div class="main main-text">
+          <section>
+            If you want to contact us, please use this cool form
+          </section>
+          <form class="contact">
+            <div class="form-email">
+              <label class="form-label" for="email">Email:</label>
+              <input type="text" class="input" name="email" id="email" />
+            </div>
+            <div class="form-name">
+              <label class="form-label" for="name">Name:</label>
+              <input class="input" type="text" name="name" id="name" />
+            </div>
+            <label class="form-label" for="message">Enter your message:</label>
+            <textarea class="message" name="message" id="message">
+Enter your message here</textarea
+            >
+            <input
+              type="submit"
+              id="submit"
+              class="submit"
+              value="Send message!"
+            />
+          </form>
+        </div>
       </div>
     </div>
   </body>
