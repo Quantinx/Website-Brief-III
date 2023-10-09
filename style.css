@@ -32,7 +32,7 @@ h1,h2,h3,h4,h5,h6 {
   body {
     background-image:url(images/bg_purple.png);
     font-family: 'Caveat',  cursive;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
   /*---------- Layout ---------- */
 .page-title {
@@ -89,7 +89,9 @@ justify-content: space-around;
 }
 
 .sidebar-content {
-  width: 70%
+  width: 70%;
+  margin-right: var(--padding-horizontal);
+  
 }
 
 .global-wrapper { 
@@ -99,9 +101,20 @@ justify-content: space-around;
 .contact {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center
 
 }
+/*---overrides for very small screens -33rem---*/
+@media (max-width:33rem) {   
+  .sidebar {
+    flex-direction: column-reverse;
+  }
+
+  .section-container {
+    flex-direction: column-reverse;
+  }
+}
+
 /*---overrides for mediums sized screens (48rem-62.5rem) changes layout to use a grid, placing sidebar on the side--- */
 @media (min-width:48rem) {
 
@@ -132,6 +145,10 @@ flex-direction: column-reverse;
 justify-content: flex-end;
 
 }
+.sidebar-img {
+  width: auto;
+  height: auto;
+}
 
 }
 /*---overrides for larger screens (62.5rem+) centers the page once screen is above size  */
@@ -147,7 +164,7 @@ justify-content: flex-end;
   /*----------Components----------*/
   
   .page-title-text {
-    font-size: 1.6rem;
+    font-size: 2rem;
     text-align: center;
     color: var(--text-color-main);
   }
@@ -164,19 +181,25 @@ border-radius: 0.5rem;
  .main-text {
     color: var(--text-color-main);
  } 
+
+ .main-text-title{
+  font-size: 1.8rem;
+ }
 .section-content-left {
     width: 70%;
+    margin-right: var(--padding-horizontal);
     color: var(--text-color-main);
 }
+.sidebar-content li {
+list-style:circle
+  }
 
 .sidebar {
     color: var(--text-color-main);
 }
-.sidebar-img {
-    aspect-ratio: 5/7;
-    height: auto;
-    display: block;
-}
+
+
+
 
 .main-video {
   aspect-ratio: 16/9;
@@ -194,15 +217,16 @@ border-radius: 0.5rem;
 }
 
 .input {
-  width: 20rem;
+  width: 100%;
+  max-width: 100%;
   
 }
 
 .message { 
   height: 20rem;
-  width: 25rem;
-
-  resize:none 
+  width: 100%;
+  max-width: 100%;
+  resize:auto 
 }
 
 .form-label {
